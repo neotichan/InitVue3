@@ -1,6 +1,14 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <p>Vue3のなんちゃってチートシート。</p>
+  </div>
+  <div id="childComponent">
+     <V_bindVue></V_bindVue>
+     <V_modelVue></V_modelVue>
+  </div>
+<div>
+    <p>以下デフォルト</p>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -31,10 +39,18 @@
 </template>
 
 <script>
+import V_bindVue from './childcomponents/V_bind.vue';
+import V_modelVue from './childcomponents/V_model.vue';
+
+
 export default {
   name: 'HelloWorld',
-  props: {
-    msg: String
+  components:{
+    V_bindVue,
+    V_modelVue,
+},
+  data() {
+    return {msg : "PracticeVue3"}
   }
 }
 </script>
