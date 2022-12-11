@@ -6,7 +6,8 @@
   <div id="childComponent">
      <V_bindVue></V_bindVue>
      <V_modelVue></V_modelVue>
-  </div>
+    <RouterComponentVue></RouterComponentVue>
+    </div>
 <div>
     <p>以下デフォルト</p>
     <p>
@@ -39,6 +40,7 @@
 </template>
 
 <script>
+import RouterComponentVue from './childcomponents/RouterComponent.vue';
 import V_bindVue from './childcomponents/V_bind.vue';
 import V_modelVue from './childcomponents/V_model.vue';
 
@@ -48,6 +50,7 @@ export default {
   components:{
     V_bindVue,
     V_modelVue,
+    RouterComponentVue
 },
   data() {
     return {msg : "PracticeVue3"}
